@@ -82,7 +82,7 @@ option {
 main {
     padding: 0 24px;
     background-color: #F4F4F4;
-    height: 100vh;
+    height: 100%;
 }
 
 button {
