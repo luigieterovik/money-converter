@@ -9,6 +9,8 @@ const convertMoney = async () => {
 
   const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
 
+  console.log (data)
+
   const dollar = data.USDBRL.high
   const euro = data.EURBRL.high
   const bitcoin = data.BTCBRL.high
@@ -28,7 +30,7 @@ const convertMoney = async () => {
   }
 
   if (select.value === 'Bitcoin') {
-    currencyValue.innerHTML = (inputValue / bitcoin)
+    currencyValue.innerHTML = ((inputValue / bitcoin) / 1000).toFixed(7)
   }
 }
 
