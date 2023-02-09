@@ -28,7 +28,7 @@ const convertMoney = async () => {
   }
 
   if (select.value === 'Bitcoin') {
-    currencyValue.innerHTML = ((inputValue / bitcoin) / 1000).toFixed(7)
+    currencyValue.innerHTML = (inputValue / bitcoin / 1000).toFixed(7)
   }
 }
 
